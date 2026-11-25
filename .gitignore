@@ -1,0 +1,4 @@
+.sites/
+outputs/
+*.tgz
+*.tar.gz
