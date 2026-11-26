@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="egg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12.7c0 4-3.2 7.3-7.3 7.3-1.8 0-2.6-.8-4.1-.8-1 0-1.6.3-2.6.3-2.8 0-4.7-1.9-4.7-4.5 0-2.5 1.9-3.7 3-5.4C6.6 7.7 7.2 4 11.1 4c3.1 0 4 2.8 6.4 3.7 2.2.9 3.5 2.5 3.5 5Z"/>
+    <circle cx="12.3" cy="12.5" r="3.25"/>
+  </symbol>
+  <symbol id="sandwich" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m3 13 8-7.7a1.5 1.5 0 0 1 2 0l8 7.7H3Zm0 0v2.5L5.4 17l3.3-1 3.3 1 3.3-1 3.3 1 2.4-1.5V13M4 17v2h16v-2"/>
+  </symbol>
+  <symbol id="pot" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M5 10h14v6.5a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3V10Zm-2 0h18M3 13H2m19 0h1M6 9.5V8.3a2.8 2.8 0 0 1 2.8-2.8h6.4A2.8 2.8 0 0 1 18 8.3v1.2M10.5 5.5V4h3v1.5"/>
+  </symbol>
+  <symbol id="fries" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m4.5 11 1.8 9h11.4l1.8-9h-4.1a3.4 3.4 0 0 1-6.8 0H4.5ZM7 11 5.6 5.5 9 4.7l1.5 6.4M10.5 11l.1-7h3.5l-.1 7m.1 0 1.7-6.2 3.1.8-1.4 5.4"/>
+  </symbol>
+  <symbol id="cake" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3.5 12.5 14 5.3c.7-.5 1.6-.5 2.3 0l4.2 2.8v10.4h-17v-6Zm0 0h17m-17 3h17"/>
+    <path d="M14 5.3a2.4 2.4 0 0 1 4-2.3"/>
+  </symbol>
+  <symbol id="cup" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 9h13v3.5a6.5 6.5 0 0 1-13 0V9Zm13 1h2a2.5 2.5 0 0 1 0 5h-2.6M3 20h16M8 6c1-1 .9-2 0-3m4.5 3c1-1 .9-2 0-3"/>
+  </symbol>
+  <symbol id="search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+    <circle cx="10.5" cy="10.5" r="5.75"/>
+    <path d="m15 15 4.3 4.3"/>
+  </symbol>
+</svg>

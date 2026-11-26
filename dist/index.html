@@ -3,97 +3,71 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#0b0b0b" />
+    <meta name="theme-color" content="#fbf5eb" />
     <meta
       name="description"
       content="Explore the Bestwood Café menu: all-day breakfast, hot meals, sandwiches, sweet treats and drinks."
     />
     <title>Bestwood Café | Menu</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,600&amp;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
   </head>
-  <body>
+  <body id="top">
     <a class="skip-link" href="#menu">Skip to the menu</a>
 
-    <header class="site-header" id="top">
-      <div class="header-glow" aria-hidden="true"></div>
-      <div class="hero shell">
-        <div class="hero-copy">
-          <span class="eyebrow">Welcome to</span>
-          <h1 class="sr-only">Bestwood Café menu</h1>
-          <img
-            class="brand-logo"
-            src="assets/bestwood-logo.png"
-            width="1536"
-            height="1024"
-            alt="Bestwood Cafe"
-          />
-          <p class="hero-tagline">Good food. Proper portions.</p>
-          <a class="hero-button" href="#menu">Explore the menu</a>
-        </div>
-
-        <aside class="hero-card" aria-label="All-day breakfast">
-          <span class="hero-card-label">Our favourite</span>
-          <h2>Breakfast, any time.</h2>
-          <p>Full English, smaller plates and vegetarian options—served all day.</p>
-          <a href="#breakfast">See breakfast</a>
-        </aside>
+    <header class="site-header shell">
+      <div class="wordmark">
+        <span class="wordmark-mark"><svg aria-hidden="true"><use href="assets/menu-icons.svg#cup"></use></svg></span>
+        <span>Bestwood Café</span>
       </div>
-      <div class="ticker" aria-hidden="true">
-        <div class="ticker-track">
-          <span>Breakfast all day</span><i>◆</i><span>Homemade meals</span><i>◆</i><span>Hot &amp; cold drinks</span><i>◆</i>
-          <span>Breakfast all day</span><i>◆</i><span>Homemade meals</span><i>◆</i><span>Hot &amp; cold drinks</span><i>◆</i>
+      <div class="hero">
+        <div class="hero-copy">
+          <h1>The café <em>menu</em></h1>
+          <p>All-day breakfasts, homemade meals and a proper cuppa.</p>
         </div>
+        <img class="hero-art" src="assets/breakfast-illustration.svg" width="360" height="300" alt="" />
       </div>
     </header>
 
     <nav class="category-nav" aria-label="Menu categories">
-      <div class="category-scroll shell">
-        <a class="category-link is-active" href="#breakfast">Breakfast</a>
-        <a class="category-link" href="#lunch">Lunch</a>
-        <a class="category-link" href="#hot-meals">Hot meals</a>
-        <a class="category-link" href="#kids">Kids</a>
-        <a class="category-link" href="#treats">Treats</a>
-        <a class="category-link" href="#drinks">Drinks</a>
+      <div class="category-links shell">
+        <a class="category-link" href="#breakfast"><svg aria-hidden="true"><use href="assets/menu-icons.svg#egg"></use></svg>Breakfast</a>
+        <a class="category-link" href="#lunch"><svg aria-hidden="true"><use href="assets/menu-icons.svg#sandwich"></use></svg>Lunch</a>
+        <a class="category-link" href="#hot-meals"><svg aria-hidden="true"><use href="assets/menu-icons.svg#pot"></use></svg>Hot meals</a>
+        <a class="category-link" href="#kids"><svg aria-hidden="true"><use href="assets/menu-icons.svg#fries"></use></svg>Kids</a>
+        <a class="category-link" href="#treats"><svg aria-hidden="true"><use href="assets/menu-icons.svg#cake"></use></svg>Treats</a>
+        <a class="category-link" href="#drinks"><svg aria-hidden="true"><use href="assets/menu-icons.svg#cup"></use></svg>Drinks</a>
       </div>
     </nav>
 
-    <main id="menu">
-      <section class="menu-intro shell" aria-labelledby="menu-title">
-        <div>
-          <span class="eyebrow eyebrow-dark">Made for your day</span>
-          <h2 id="menu-title">What are you hungry for?</h2>
-          <p>From a proper breakfast to a quick cuppa, find your Bestwood favourite.</p>
+    <main class="shell" id="menu" tabindex="-1">
+      <div class="search-wrap" role="search" aria-label="Menu" hidden>
+        <label class="sr-only" for="menu-search">Search the menu</label>
+        <div class="search-field">
+          <svg aria-hidden="true"><use href="assets/menu-icons.svg#search"></use></svg>
+          <input id="menu-search" type="search" placeholder="Search the menu" autocomplete="off" />
         </div>
-        <div class="search-wrap">
-          <label for="menu-search">Search the menu</label>
-          <div class="search-field">
-            <svg aria-hidden="true" viewBox="0 0 24 24">
-              <path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z" />
-            </svg>
-            <input id="menu-search" type="search" placeholder="Try “latte” or “chips”" autocomplete="off" />
-          </div>
-          <p class="search-status" aria-live="polite"></p>
-        </div>
-      </section>
+        <p class="search-status" role="status"></p>
+      </div>
 
-      <div class="menu-content shell">
-        <section class="menu-group featured-group" id="breakfast" data-menu-section>
+      <div class="menu-content">
+        <section class="menu-group" id="breakfast" aria-labelledby="breakfast-title" data-menu-section>
           <header class="group-heading">
-            <div>
-              <span class="section-kicker">Start here</span>
-              <h2>Breakfast</h2>
-            </div>
+            <span class="group-icon"><svg aria-hidden="true"><use href="assets/menu-icons.svg#egg"></use></svg></span>
+            <h2 id="breakfast-title">Breakfast</h2>
             <span class="all-day-badge">Served all day</span>
           </header>
 
           <div class="menu-grid breakfast-grid">
-            <article class="menu-card menu-card-dark" data-menu-card>
+            <article class="menu-card menu-card-featured" data-menu-card>
               <h3>English breakfasts</h3>
               <div class="menu-list">
-                <div class="menu-item featured-item" data-menu-item data-name="full english breakfast eat in takeaway">
-                  <div class="item-title"><h4>Full English Breakfast</h4><span class="popular-pill">Popular</span></div>
+                <div class="menu-item" data-menu-item data-name="full english breakfast eat in takeaway">
+                  <h4>Full English Breakfast</h4>
                   <div class="dual-price"><span><small>Eat in</small>£7.99</span><span><small>Takeaway</small>£7.49</span></div>
                 </div>
                 <div class="menu-item" data-menu-item data-name="small english breakfast eat in takeaway">
@@ -117,8 +91,7 @@
               </div>
             </article>
 
-            <article class="menu-card red-accent" data-menu-card>
-              <span class="card-icon" aria-hidden="true">BAP</span>
+            <article class="menu-card" data-menu-card>
               <h3>Breakfast Cob / Bap</h3>
               <div class="menu-list compact-list">
                 <div class="menu-item" data-menu-item data-name="breakfast cob bap small"><h4>Small</h4><strong>£3.50</strong></div>
@@ -129,9 +102,10 @@
           </div>
         </section>
 
-        <section class="menu-group" id="lunch" data-menu-section>
+        <section class="menu-group" id="lunch" aria-labelledby="lunch-title" data-menu-section>
           <header class="group-heading">
-            <div><span class="section-kicker">Made your way</span><h2>Lunch</h2></div>
+            <span class="group-icon"><svg aria-hidden="true"><use href="assets/menu-icons.svg#sandwich"></use></svg></span>
+            <h2 id="lunch-title">Lunch</h2>
           </header>
           <div class="menu-grid">
             <article class="menu-card wide-card" data-menu-card>
@@ -139,10 +113,10 @@
               <p class="card-note">Pick your favourite filling.</p>
               <div class="size-key" aria-hidden="true"><span>Small</span><span>Large</span></div>
               <div class="menu-list">
-                <div class="menu-item sized-item" data-menu-item data-name="cold sandwich small large"><h4>Cold Sandwich</h4><div><strong>£3.39</strong><strong>£3.79</strong></div></div>
-                <div class="menu-item sized-item" data-menu-item data-name="hot toastie small large"><h4>Hot Toastie</h4><div><strong>£3.39</strong><strong>£3.79</strong></div></div>
-                <div class="menu-item sized-item" data-menu-item data-name="panini small large"><h4>Panini</h4><div><strong>£3.39</strong><strong>£3.79</strong></div></div>
-                <div class="menu-item sized-item" data-menu-item data-name="wrap small large"><h4>Wrap</h4><div><strong>£3.39</strong><strong>£3.79</strong></div></div>
+                <div class="menu-item sized-item" data-menu-item data-name="cold sandwich small large"><h4>Cold Sandwich</h4><div><strong><span class="sr-only">Small </span>£3.39</strong><strong><span class="sr-only">Large </span>£3.79</strong></div></div>
+                <div class="menu-item sized-item" data-menu-item data-name="hot toastie small large"><h4>Hot Toastie</h4><div><strong><span class="sr-only">Small </span>£3.39</strong><strong><span class="sr-only">Large </span>£3.79</strong></div></div>
+                <div class="menu-item sized-item" data-menu-item data-name="panini small large"><h4>Panini</h4><div><strong><span class="sr-only">Small </span>£3.39</strong><strong><span class="sr-only">Large </span>£3.79</strong></div></div>
+                <div class="menu-item sized-item" data-menu-item data-name="wrap small large"><h4>Wrap</h4><div><strong><span class="sr-only">Small </span>£3.39</strong><strong><span class="sr-only">Large </span>£3.79</strong></div></div>
                 <div class="menu-item add-on" data-menu-item data-name="sandwich toastie panini wrap extra filling"><h4>Extra filling</h4><strong>50p each</strong></div>
               </div>
             </article>
@@ -163,7 +137,7 @@
               </div>
             </article>
 
-            <article class="menu-card salad-card" data-menu-card>
+            <article class="menu-card" data-menu-card>
               <h3>Salad Boxes</h3>
               <p class="card-note">Includes plain pasta, fresh salad and coleslaw.</p>
               <div class="menu-list compact-list">
@@ -173,53 +147,59 @@
               </div>
             </article>
 
-            <article class="special-card" data-menu-card>
-              <div>
-                <span class="section-kicker">Café special</span>
-                <h3>Sandra’s Salad Box <em>with Chips</em></h3>
+            <article class="menu-card menu-card-featured" data-menu-card>
+              <h3>Café special</h3>
+              <div class="menu-list">
+                <div class="menu-item" data-menu-item data-name="sandra sandras salad box with chips cafe special"><h4>Sandra’s Salad Box with Chips</h4><strong>£4.99</strong></div>
               </div>
-              <strong data-menu-item data-name="sandra sandras salad box with chips cafe special">£4.99</strong>
             </article>
           </div>
         </section>
 
-        <section class="menu-group" id="hot-meals" data-menu-section>
+        <section class="menu-group" id="hot-meals" aria-labelledby="hot-meals-title" data-menu-section>
           <header class="group-heading">
-            <div><span class="section-kicker">Comfort food</span><h2>Homemade meals</h2></div>
+            <span class="group-icon"><svg aria-hidden="true"><use href="assets/menu-icons.svg#pot"></use></svg></span>
+            <h2 id="hot-meals-title">Homemade meals</h2>
           </header>
-          <article class="menu-card meals-card" data-menu-card>
-            <div class="meal-list">
-              <div class="menu-item meal-item" data-menu-item data-name="chilli con carne homemade meal"><span>01</span><h4>Chilli con Carne</h4><strong>£4.99</strong></div>
-              <div class="menu-item meal-item" data-menu-item data-name="cottage pie homemade meal"><span>02</span><h4>Cottage Pie</h4><strong>£4.99</strong></div>
-              <div class="menu-item meal-item" data-menu-item data-name="lasagna lasagne homemade meal"><span>03</span><h4>Lasagna</h4><strong>£4.99</strong></div>
-              <div class="menu-item meal-item" data-menu-item data-name="chicken curry homemade meal"><span>04</span><h4>Chicken Curry</h4><strong>£4.99</strong></div>
-            </div>
-            <div class="meal-extras">
-              <span>Make it a meal</span>
-              <div class="menu-item" data-menu-item data-name="add fries"><h4>Add fries</h4><strong>+ £1.00</strong></div>
-              <div class="menu-item" data-menu-item data-name="add homemade chips"><h4>Add homemade chips</h4><strong>+ £1.50</strong></div>
-            </div>
-          </article>
+          <div class="menu-grid">
+            <article class="menu-card" data-menu-card>
+              <div class="menu-list">
+                <div class="menu-item" data-menu-item data-name="chilli con carne homemade meal"><h3>Chilli con Carne</h3><strong>£4.99</strong></div>
+                <div class="menu-item" data-menu-item data-name="cottage pie homemade meal"><h3>Cottage Pie</h3><strong>£4.99</strong></div>
+                <div class="menu-item" data-menu-item data-name="lasagna lasagne homemade meal"><h3>Lasagna</h3><strong>£4.99</strong></div>
+                <div class="menu-item" data-menu-item data-name="chicken curry homemade meal"><h3>Chicken Curry</h3><strong>£4.99</strong></div>
+              </div>
+            </article>
+            <article class="menu-card menu-card-featured" data-menu-card>
+              <h3>Meal extras</h3>
+              <div class="menu-list">
+                <div class="menu-item" data-menu-item data-name="add fries"><h4>Add fries</h4><strong>+ £1.00</strong></div>
+                <div class="menu-item" data-menu-item data-name="add homemade chips"><h4>Add homemade chips</h4><strong>+ £1.50</strong></div>
+              </div>
+            </article>
+          </div>
         </section>
 
-        <section class="menu-group" id="kids" data-menu-section>
+        <section class="menu-group" id="kids" aria-labelledby="kids-title" data-menu-section>
           <header class="group-heading">
-            <div><span class="section-kicker">For little appetites</span><h2>Kids’ menu</h2></div>
+            <span class="group-icon"><svg aria-hidden="true"><use href="assets/menu-icons.svg#fries"></use></svg></span>
+            <h2 id="kids-title">Kids’ menu</h2>
           </header>
-          <article class="menu-card kids-card" data-menu-card>
+          <article class="menu-card" data-menu-card>
             <div class="menu-list">
-              <div class="menu-item" data-menu-item data-name="kids childrens sausage chips beans"><h4>Sausage, Chips &amp; Beans</h4><strong>£3.99</strong></div>
-              <div class="menu-item" data-menu-item data-name="kids childrens chicken nuggets chips"><h4>Chicken Nuggets &amp; Chips</h4><strong>£3.99</strong></div>
-              <div class="menu-item" data-menu-item data-name="kids childrens english breakfast"><h4>Kids’ English Breakfast</h4><strong>£3.99</strong></div>
+              <div class="menu-item" data-menu-item data-name="kids childrens sausage chips beans"><h3>Sausage, Chips &amp; Beans</h3><strong>£3.99</strong></div>
+              <div class="menu-item" data-menu-item data-name="kids childrens chicken nuggets chips"><h3>Chicken Nuggets &amp; Chips</h3><strong>£3.99</strong></div>
+              <div class="menu-item" data-menu-item data-name="kids childrens english breakfast"><h3>Kids’ English Breakfast</h3><strong>£3.99</strong></div>
             </div>
           </article>
         </section>
 
-        <section class="menu-group" id="treats" data-menu-section>
+        <section class="menu-group" id="treats" aria-labelledby="treats-title" data-menu-section>
           <header class="group-heading">
-            <div><span class="section-kicker">Something on the side</span><h2>Pies &amp; sweet treats</h2></div>
+            <span class="group-icon"><svg aria-hidden="true"><use href="assets/menu-icons.svg#cake"></use></svg></span>
+            <h2 id="treats-title">Pies &amp; sweet treats</h2>
           </header>
-          <div class="menu-grid treats-grid">
+          <div class="menu-grid">
             <article class="menu-card" data-menu-card>
               <h3>Pies &amp; pastries</h3>
               <div class="menu-list">
@@ -232,7 +212,7 @@
               </div>
             </article>
 
-            <article class="menu-card cake-card" data-menu-card>
+            <article class="menu-card" data-menu-card>
               <h3>Cakes &amp; sweet treats</h3>
               <div class="menu-list">
                 <div class="menu-item" data-menu-item data-name="slice cake"><h4>Slice of Cake</h4><strong>£2.95</strong></div>
@@ -249,26 +229,27 @@
           </div>
         </section>
 
-        <section class="menu-group drinks-group" id="drinks" data-menu-section>
+        <section class="menu-group" id="drinks" aria-labelledby="drinks-title" data-menu-section>
           <header class="group-heading">
-            <div><span class="section-kicker">Your perfect sip</span><h2>Drinks</h2></div>
+            <span class="group-icon"><svg aria-hidden="true"><use href="assets/menu-icons.svg#cup"></use></svg></span>
+            <h2 id="drinks-title">Drinks</h2>
           </header>
-          <div class="menu-grid drinks-grid">
-            <article class="menu-card hot-drinks-card" data-menu-card>
-              <div class="drink-heading"><h3>Hot drinks</h3><span aria-hidden="true">☕</span></div>
+          <div class="menu-grid">
+            <article class="menu-card" data-menu-card>
+              <h3>Hot drinks</h3>
               <div class="size-key" aria-hidden="true"><span>Regular</span><span>Large</span></div>
               <div class="menu-list">
-                <div class="menu-item sized-item" data-menu-item data-name="tea regular large hot drink"><h4>Tea</h4><div><strong>£1.75</strong><strong>£1.99</strong></div></div>
-                <div class="menu-item sized-item" data-menu-item data-name="americano regular large coffee hot drink"><h4>Americano</h4><div><strong>£2.20</strong><strong>£2.50</strong></div></div>
-                <div class="menu-item sized-item" data-menu-item data-name="latte regular large coffee hot drink"><h4>Latte</h4><div><strong>£2.50</strong><strong>£2.90</strong></div></div>
-                <div class="menu-item sized-item" data-menu-item data-name="cappuccino regular large coffee hot drink"><h4>Cappuccino</h4><div><strong>£2.50</strong><strong>£2.90</strong></div></div>
-                <div class="menu-item sized-item" data-menu-item data-name="mocha regular large coffee hot drink"><h4>Mocha</h4><div><strong>£2.70</strong><strong>£3.20</strong></div></div>
-                <div class="menu-item sized-item" data-menu-item data-name="hot chocolate regular large hot drink"><h4>Hot Chocolate</h4><div><strong>£2.50</strong><strong>£2.90</strong></div></div>
+                <div class="menu-item sized-item" data-menu-item data-name="tea regular large hot drink"><h4>Tea</h4><div><strong><span class="sr-only">Regular </span>£1.75</strong><strong><span class="sr-only">Large </span>£1.99</strong></div></div>
+                <div class="menu-item sized-item" data-menu-item data-name="americano regular large coffee hot drink"><h4>Americano</h4><div><strong><span class="sr-only">Regular </span>£2.20</strong><strong><span class="sr-only">Large </span>£2.50</strong></div></div>
+                <div class="menu-item sized-item" data-menu-item data-name="latte regular large coffee hot drink"><h4>Latte</h4><div><strong><span class="sr-only">Regular </span>£2.50</strong><strong><span class="sr-only">Large </span>£2.90</strong></div></div>
+                <div class="menu-item sized-item" data-menu-item data-name="cappuccino regular large coffee hot drink"><h4>Cappuccino</h4><div><strong><span class="sr-only">Regular </span>£2.50</strong><strong><span class="sr-only">Large </span>£2.90</strong></div></div>
+                <div class="menu-item sized-item" data-menu-item data-name="mocha regular large coffee hot drink"><h4>Mocha</h4><div><strong><span class="sr-only">Regular </span>£2.70</strong><strong><span class="sr-only">Large </span>£3.20</strong></div></div>
+                <div class="menu-item sized-item" data-menu-item data-name="hot chocolate regular large hot drink"><h4>Hot Chocolate</h4><div><strong><span class="sr-only">Regular </span>£2.50</strong><strong><span class="sr-only">Large </span>£2.90</strong></div></div>
               </div>
             </article>
 
-            <article class="menu-card cold-drinks-card" data-menu-card>
-              <div class="drink-heading"><h3>Cold drinks</h3><span aria-hidden="true">◒</span></div>
+            <article class="menu-card" data-menu-card>
+              <h3>Cold drinks</h3>
               <div class="menu-list">
                 <div class="menu-item" data-menu-item data-name="coke cola cold drink"><h4>Coke</h4><strong>£1.50</strong></div>
                 <div class="menu-item" data-menu-item data-name="pepsi cola cold drink"><h4>Pepsi</h4><strong>£1.50</strong></div>
@@ -286,9 +267,7 @@
         </section>
 
         <div class="no-results" id="no-results" hidden>
-          <span aria-hidden="true">×</span>
           <h2>No menu items found</h2>
-          <p>Try a different search, or browse all of our categories.</p>
           <button type="button" id="clear-search">Show full menu</button>
         </div>
       </div>
@@ -296,14 +275,8 @@
 
     <footer class="site-footer">
       <div class="footer-inner shell">
-        <div class="footer-brand">
-          <span>BESTWOOD</span>
-          <strong>CAFÉ</strong>
-        </div>
-        <div class="footer-copy">
-          <p>Good food. Proper portions. A warm welcome.</p>
-          <p class="allergen-note">Please speak to our team about allergens and dietary requirements before ordering.</p>
-        </div>
+        <strong class="footer-brand">Bestwood Café</strong>
+        <p class="allergen-note">Please speak to our team about allergens and dietary requirements before ordering.</p>
         <a href="#top" class="back-to-top">Back to top</a>
       </div>
     </footer>
